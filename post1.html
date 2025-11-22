@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>आत्म-विश्वास की शक्ति: सफलता की पहली सीढ़ी - Faith Deep Heart</title>
+    <link rel="stylesheet" href="style.css">
+
+    <meta property="og:title" content="आत्म-विश्वास की शक्ति: सफलता की पहली सीढ़ी" />
+    <meta property="og:description" content="कैसे अपने अंदर के विश्वास को जगाकर आप किसी भी चुनौती का सामना कर सकते हैं और जीवन में आगे बढ़ सकते हैं।" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1549497538-303791108f95?w=600&h=400&fit=crop" /> <meta property="og:url" content="https://example.com/post1.html" /> 
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Faith Deep Heart" />
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" style="color: white; text-decoration: none;"><h1>💖 Faith Deep Heart 📖</h1></a>
+        <p>पोस्ट: आत्म-विश्वास की शक्ति</p>
+    </header>
+
+    <div class="container">
+        <div class="post-detail">
+            <h1>आत्म-विश्वास की शक्ति: सफलता की पहली सीढ़ी</h1>
+            <p style="color: #6c757d; font-style: italic;">दिनांक: 23 नवंबर 2025</p>
+            
+            <img src="https://images.unsplash.com/photo-1549497538-303791108f95?w=600&h=400&fit=crop" alt="आत्म-विश्वास इमेज"> 
+
+            <p>आत्म-विश्वास किसी भी व्यक्ति के जीवन में सबसे शक्तिशाली उपकरण है। यह केवल क्षमता का प्रदर्शन नहीं है, बल्कि आपके अपने मूल्यों और निर्णयों में अटूट विश्वास है। जब आप खुद पर विश्वास करते हैं, तो दुनिया आप पर विश्वास करने लगती है।</p>
+            
+            <h3>छोटे कदम से शुरुआत</h3>
+            <p>विश्वास अचानक नहीं आता, यह छोटी सफलताओं से पोषित होता है। हर दिन एक छोटा लक्ष्य पूरा करें और अपनी जीत का जश्न मनाएं। धीरे-धीरे, यह आदत आपको बड़ी चुनौतियों के लिए तैयार करेगी।</p>
+
+            <a href="index.html" class="read-more" style="background-color: #007bff;">← होम पर वापस जाएं</a>
+        </div>
+    </div>
+
+    <div class="floating-buttons">
+        <button onclick="sharePost()" title="शेयर करें">🔗</button>
+        <button onclick="downloadImage('https://images.unsplash.com/photo-1549497538-303791108f95?w=600&h=400&fit=crop', 'FaithDeepHeart_Confidence.jpg')" title="इमेज डाउनलोड करें">⬇️</button>
+    </div>
+
+    <footer class="footer">
+        &copy; 2025 Faith Deep Heart | सभी अधिकार सुरक्षित।
+        <div><a href="#">गोपनीयता नीति</a> | <a href="#">हमसे संपर्क करें</a></div>
+    </footer>
+
+    <script>
+        function sharePost() {
+            if (navigator.share) {
+                navigator.share({
+                    title: document.title,
+                    text: document.querySelector('meta[property="og:description"]').content,
+                    url: window.location.href,
+                }).catch((error) => console.log('Error sharing', error));
+            } else {
+                alert("पोस्ट लिंक कॉपी हो गया है।");
+                navigator.clipboard.writeText(window.location.href);
+            }
+        }
+
+        function downloadImage(imageUrl, fileName) {
+            const link = document.createElement('a');
+            link.href = imageUrl;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
